@@ -1,0 +1,176 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HIRY - Le projet</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.2/css/all.min.css">
+    <link rel="stylesheet" href="style.css">
+    <script>
+        tailwind.config = {
+            theme: {
+                extend: {
+                    colors: {
+                        'hiry-blue': '#A3D9FF',
+                        'hiry-dark': '#0A0E1C',
+                        'hiry-purple': '#7D51E2',
+                        'hiry-light-blue': '#5DE4F4',
+                        'hiry-mid-blue': '#2E69A4',
+                        'hiry-deep-blue': '#194AAD',
+                        'hiry-off-white': '#F1EFE2',
+                    }
+                }
+            }
+        }
+    </script>
+</head>
+<body class="bg-hiry-dark text-white font-sans">
+
+    <header class="fixed top-0 left-0 right-0 z-50 p-4 flex justify-between items-center transition-all duration-300">
+        <img src="assets/hiry-logo.png" alt="HIRY Logo" class="w-24 h-auto">
+        <div class="text-right">
+             <p class="font-bold text-lg">Maxime Nogues</p>
+             <p class="text-sm text-gray-300">Parcours Entrepreneur 2024-2025</p>
+        </div>
+    </header>
+
+    <main>
+        <section class="hero-section h-screen bg-cover bg-center flex flex-col justify-center items-start p-8" style="background-image: linear-gradient(to top, rgba(10, 14, 28, 1) 10%, rgba(10, 14, 28, 0.2) 100%), url('images/photo-psb-hero.jpg');">
+            <div class="w-full md:w-1/2">
+                <h1 class="text-6xl font-bold">HIRY</h1>
+                <p class="text-2xl mt-4 italic">"RIGHT PERSON. RIGHT MOMENT. RIGHT COMPANY."</p>
+                <p class="mt-4 text-lg">
+                    Fatigué des processus de recrutement longs, impersonnels et inefficaces ? HIRY réinvente l'expérience en la rendant ludique, rapide et profondément humaine grâce à l'IA pour créer des connexions authentiques.
+                </p>
+                <button onclick="openModal('summary')" class="mt-6 px-8 py-3 bg-hiry-blue text-hiry-dark font-bold rounded hover:bg-hiry-light-blue transition-colors">
+                    <i class="fas fa-play mr-2"></i> Lancer le Pitch
+                </button>
+            </div>
+        </section>
+
+        <div class="content-rows px-8 pb-16">
+
+            <div class="category-row">
+                <h2 class="text-2xl font-bold mb-4">Le Porteur de Projet</h2>
+                <div class="cards-container">
+                    <div class="card" onclick="openModal('profil')">
+                        <img src="https://images.unsplash.com/photo-1560250097-0b93528c311a?q=80&w=1887&auto=format&fit=crop" alt="Profil et Formation" class="card-img">
+                        <div class="card-title"><h3>Profil & Formation</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('techSkills')">
+                        <img src="https://images.unsplash.com/photo-1542831371-29b0f74f9713?q=80&w=1740&auto=format&fit=crop" alt="Compétences Techniques" class="card-img">
+                        <div class="card-title"><h3>Compétences Techniques</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('exp')">
+                        <img src="https://images.unsplash.com/photo-1579532537598-459ecdaf39cc?q=80&w=1887&auto=format&fit=crop" alt="Expérience et Vision" class="card-img">
+                        <div class="card-title"><h3>Expérience & Vision</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('strengths')">
+                        <img src="https://images.unsplash.com/photo-1521791136064-7986c2920216?q=80&w=1738&auto=format&fit=crop" alt="Points Forts" class="card-img">
+                        <div class="card-title"><h3>Points Forts</h3></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-row">
+                <h2 class="text-2xl font-bold mb-4">Le Projet HIRY</h2>
+                <div class="cards-container">
+                    <div class="card" onclick="openModal('origin')">
+                        <img src="https://images.unsplash.com/photo-1556761175-5973dc0f32e7?q=80&w=1932&auto=format&fit=crop" alt="Origine et Opportunité" class="card-img">
+                        <div class="card-title"><h3>Origine & Opportunité</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('goals')">
+                        <img src="https://images.unsplash.com/photo-1557426272-fc759fdf7a8d?q=80&w=1740&auto=format&fit=crop" alt="Objectifs" class="card-img">
+                        <div class="card-title"><h3>Objectifs</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('progress')">
+                        <img src="https://images.unsplash.com/photo-1516321497487-e288fb19713f?q=80&w=1740&auto=format&fit=crop" alt="Avancement" class="card-img">
+                        <div class="card-title"><h3>Avancement</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('nextSteps')">
+                        <img src="https://images.unsplash.com/photo-1522071820081-009f0129c71c?q=80&w=1740&auto=format&fit=crop" alt="Prochaines Étapes" class="card-img">
+                        <div class="card-title"><h3>Prochaines Étapes</h3></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-row">
+                <h2 class="text-2xl font-bold mb-4">Étude de Marché</h2>
+                <div class="cards-container">
+                    <div class="card" onclick="openModal('marketHypotheses')">
+                        <img src="https://images.unsplash.com/photo-1593642532842-98d0fd5ebc1a?q=80&w=1738&auto=format&fit=crop" alt="Hypothèses et Méthode" class="card-img">
+                        <div class="card-title"><h3>Hypothèses & Méthode</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('marketAnalysis')">
+                        <img src="https://images.unsplash.com/photo-1504711434969-e33886168f5c?q=80&w=1740&auto=format&fit=crop" alt="Analyse du Marché" class="card-img">
+                        <div class="card-title"><h3>Analyse du Marché</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('demandAnalysis')">
+                        <img src="https://images.unsplash.com/photo-1556742502-ec7c0e9f34b1?q=80&w=1740&auto=format&fit=crop" alt="Analyse de la Demande" class="card-img">
+                        <div class="card-title"><h3>Analyse de la Demande</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('competitionAndEnv')">
+                        <img src="https://images.unsplash.com/photo-1542744173-8e7e53415bb0?q=80&w=1740&auto=format&fit=crop" alt="Concurrence et Environnement" class="card-img">
+                        <div class="card-title"><h3>Concurrence & Environnement</h3></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-row">
+                <h2 class="text-2xl font-bold mb-4">Stratégie Marketing & Commerciale</h2>
+                <div class="cards-container">
+                    <div class="card" onclick="openModal('targets')">
+                         <img src="https://images.unsplash.com/photo-1556157382-97eda2d62296?q=80&w=1740&auto=format&fit=crop" alt="Clientèle Cible" class="card-img">
+                        <div class="card-title"><h3>Clientèle Cible</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('positioning')">
+                         <img src="https://images.unsplash.com/photo-1588340976238-7096a124a737?q=80&w=1887&auto=format&fit=crop" alt="Positionnement" class="card-img">
+                        <div class="card-title"><h3>Positionnement</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('mix')">
+                         <img src="https://images.unsplash.com/photo-1581291518857-4e27b48ff24e?q=80&w=1740&auto=format&fit=crop" alt="Marketing Mix" class="card-img">
+                        <div class="card-title"><h3>Marketing Mix</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('communication')">
+                         <img src="https://images.unsplash.com/photo-1557862921-37829c790f19?q=80&w=1742&auto=format&fit=crop" alt="Communication & Partenaires" class="card-img">
+                        <div class="card-title"><h3>Communication & Partenaires</h3></div>
+                    </div>
+                </div>
+            </div>
+
+            <div class="category-row">
+                <h2 class="text-2xl font-bold mb-4">Risques & Auto-évaluation</h2>
+                <div class="cards-container">
+                    <div class="card" onclick="openModal('risks')">
+                        <img src="https://images.unsplash.com/photo-1559792128-a0a19e3c4b16?q=80&w=1770&auto=format&fit=crop" alt="Analyse des Risques" class="card-img">
+                        <div class="card-title"><h3>Analyse des Risques</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('skillsGained')">
+                        <img src="https://images.unsplash.com/photo-1522202176988-66273c2fd55f?q=80&w=1742&auto=format&fit=crop" alt="Compétences Acquises" class="card-img">
+                        <div class="card-title"><h3>Compétences Acquises</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('skillsToImprove')">
+                        <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?q=80&w=1740&auto=format&fit=crop" alt="Compétences à Approfondir" class="card-img">
+                        <div class="card-title"><h3>Compétences à Approfondir</h3></div>
+                    </div>
+                    <div class="card" onclick="openModal('legal')">
+                        <img src="https://images.unsplash.com/photo-1589216532372-1c2a36790039?q=80&w=1887&auto=format&fit=crop" alt="Statut Juridique" class="card-img">
+                        <div class="card-title"><h3>Statut Juridique</h3></div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex justify-center items-center p-4">
+        <div id="modal-content" class="bg-hiry-dark p-6 md:p-8 rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
+            <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl hover:text-hiry-blue">&times;</button>
+            <div id="modal-body">
+                </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
