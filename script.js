@@ -41,6 +41,7 @@ document.addEventListener('DOMContentLoaded', function() {
         const pClass = "class='text-base lg:text-lg text-gray-200 leading-relaxed mb-4'";
         const listClass = "class='list-disc list-inside pl-4 space-y-3'";
         const liClass = "class='text-base lg:text-lg text-gray-200 leading-relaxed'";
+        const nestedListClass = "class='list-disc list-inside pl-8 mt-2 space-y-2'";
 
         switch(id) {
             case 'summary':
