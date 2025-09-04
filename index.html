@@ -36,11 +36,11 @@
     </header>
 
     <main>
-        <section class="hero-section h-screen bg-cover bg-center flex flex-col justify-center items-start p-8" style="background-image: linear-gradient(to top, rgba(10, 14, 28, 1) 10%, rgba(10, 14, 28, 0.2) 100%), url('images/photo-psb-hero.jpg');">
+        <section class="hero-section h-screen bg-cover bg-center flex flex-col justify-center items-start p-4 md:p-8" style="background-image: linear-gradient(to top, rgba(10, 14, 28, 1) 10%, rgba(10, 14, 28, 0.2) 100%), url('images/photo-psb-hero.jpg');">
             <div class="w-full md:w-1/2">
-                <h1 class="text-6xl font-bold">HIRY</h1>
-                <p class="text-2xl mt-4 italic">"RIGHT PERSON. RIGHT MOMENT. RIGHT COMPANY."</p>
-                <p class="mt-4 text-lg">
+                <h1 class="text-4xl sm:text-5xl lg:text-6xl font-bold">HIRY</h1>
+                <p class="text-xl lg:text-2xl mt-4 italic">"RIGHT PERSON. RIGHT MOMENT. RIGHT COMPANY."</p>
+                <p class="mt-4 text-base lg:text-lg">
                     Fatigué des processus de recrutement longs, impersonnels et inefficaces ? HIRY réinvente l'expérience en la rendant ludique, rapide et profondément humaine grâce à l'IA pour créer des connexions authentiques.
                 </p>
                 <button onclick="openModal('summary')" class="mt-6 px-8 py-3 bg-hiry-blue text-hiry-dark font-bold rounded hover:bg-hiry-light-blue transition-colors">
@@ -49,7 +49,7 @@
             </div>
         </section>
 
-        <div class="content-rows px-8 pb-16">
+        <div class="content-rows px-4 md:px-8 pb-16">
 
             <div class="category-row">
                 <h2 class="text-2xl font-bold mb-4">Le Porteur de Projet</h2>
@@ -160,7 +160,7 @@
     </main>
 
     <div id="modal" class="hidden fixed inset-0 bg-black bg-opacity-75 z-50 flex justify-center items-center p-4">
-        <div id="modal-content" class="bg-hiry-dark p-6 md:p-8 rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
+        <div id="modal-content" class="bg-hiry-dark p-4 sm:p-6 md:p-8 rounded-lg max-w-6xl w-full max-h-[90vh] overflow-y-auto relative">
             <button id="close-modal" class="absolute top-4 right-4 text-white text-3xl hover:text-hiry-blue">&times;</button>
             <div id="modal-body">
                 </div>

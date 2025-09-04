@@ -36,7 +36,7 @@ document.addEventListener('DOMContentLoaded', function() {
     // --- CONTENT FOR THE MODAL (VERBATIM FROM THE REPORT) ---
     function getModalContent(id) {
         // Shared Tailwind classes for styling
-        const h3Class = "class='text-3xl lg:text-4xl font-black text-hiry-blue mb-8'";
+        const h3Class = "class='text-2xl md:text-3xl lg:text-4xl font-black text-hiry-blue mb-6 md:mb-8'";
         const h4Class = "class='text-xl lg:text-2xl font-bold text-hiry-light-blue mt-8 mb-4'";
         const pClass = "class='text-base lg:text-lg text-gray-200 leading-relaxed mb-4'";
         const listClass = "class='list-disc list-inside pl-4 space-y-3'";
